@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Melbet Partner Panel | Team Leandro</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  .logo {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    user-select: none;
+  }
+  .logo .ml { color: #FFD700; }
+  .logo .b { color: #fff; }
+  .logo .team { color: #fff; font-weight: 700; margin-left: 10px; }
+  .logo .leandro { color: #fff; font-weight: 700; margin-left: 5px; }
+  h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 10px 0 5px 0;
+    text-align: center;
+  }
+  p.subtitle {
+    color: #ccc;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 25px 0;
+    text-align: center;
+  }
+  .register-btn {
+    background-color: #FFD700;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+  }
+  .register-btn:hover {
+    background-color: #e6c200;
+  }
+  form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  input[type="text"], input[type="email"] {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 2px solid #444;
+    background-color: #111;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #FFD700;
+  }
+  .send-btn {
+    background-color: #00A651;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .send-btn:hover {
+    background-color: #00873d;
+  }
+  footer {
+    margin-top: auto;
+    padding: 25px 10px 10px 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 450px) {
+    .logo {
+      font-size: 2.2rem;
+    }
+    form {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="logo" aria-label="MLB Team Leandro">
+  <span class="ml">ML</span><span class="b">B</span>
+  <span class="team">Team</span><span class="leandro">Leandro</span>
+</div>
+
+<h1>Melbet Partner Panel</h1>
+<p class="subtitle">Submit your affiliate details to join &amp; earn weekly!</p>
+
+<a href="https://refpakrtsb.top/L?tag=d_4431698m_18645c_&site=4431698&ad=18645" target="_blank" rel="noopener" class="register-btn" aria-label="Register with Click here">📝 Register with Click here</a>
+
+<form id="affiliateForm" action="#" onsubmit="return sendTelegramMessage()">
+  <label for="affiliateId">🆔 Affiliate ID</label>
+  <input type="text" id="affiliateId" name="affiliateId" placeholder="Enter your Affiliate ID" required />
+  
+  <label for="email">📧 Email Address</label>
+  <input type="email" id="email" name="email" placeholder="Enter your Email" required />
+  
+  <label for="promoCode">🔑 Promo Code</label>
+  <input type="text" id="promoCode" name="promoCode" placeholder="Enter your Promo Code" required />
+  
+  <button type="submit" class="send-btn" aria-label="Send Info via Telegram">🚀 Send Info via Telegram</button>
+</form>
+
+<footer>
+  <p>📩 Contact: <a href="https://t.me/leandrosingh_melbet" target="_blank" rel="noopener">@leandrosingh_melbet</a></p>
+  <p>📘 Facebook: <a href="https://www.facebook.com/leandrosinghaff" target="_blank" rel="noopener">Leandro Singh</a></p>
+</footer>
+
+<script>
+  function sendTelegramMessage() {
+    const affiliateId = document.getElementById('affiliateId').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const promoCode = document.getElementById('promoCode').value.trim();
+    if (!affiliateId || !email || !promoCode) {
+      alert('Please fill in all fields.');
+      return false;
+    }
+    const message = `Affiliate ID: ${affiliateId} | Email: ${email} | Promo: ${promoCode}`;
+    const telegramUsername = 'leandrosingh_melbet';
+    const telegramUrl = `https://t.me/${telegramUsername}?text=${encodeURIComponent(message)}`;
+    window.open(telegramUrl, '_blank');
+    return false;
+  }
+</script>
+
+</body>
+</html>
